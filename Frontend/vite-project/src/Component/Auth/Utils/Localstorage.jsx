@@ -145,7 +145,8 @@ localStorage.setItem('Admin',JSON.stringify(admin))
 export const getInLocalstorage=()=>{
   const employee=JSON.parse(localStorage.getItem('employee',))
   const Admin=JSON.parse(localStorage.getItem('Admin'))
-  console.log(employee,Admin)
+  return {employee, Admin}
+  // console.log(employee,Admin)
     
 }
 

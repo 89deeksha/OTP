@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Login from './Component/Auth/Auth/Login'
 import './App.css'
 import Employee from './Component/Auth/Dashboard/Employee'
 import Admin from './Component/Auth/Dashboard/Admin'
 import { getInLocalstorage, setInLocalstorage } from './Component/Auth/Utils/Localstorage'
+import { Authcontext } from './Component/Auth/Context/Authprovider'
 
 
 
@@ -28,6 +29,8 @@ if(email=="deeksha123@gmail.com" && password=="12345"){
   }
 
   }
+  const data=useContext(Authcontext)
+  console.log(data)
   
   return (
   <>
